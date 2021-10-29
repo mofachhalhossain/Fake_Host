@@ -2,7 +2,9 @@
 
 :root {
   --primary-color: #047aed;
+  --secondprimary-color: #3b6ea1;
   --secondary-color: #ffff;
+  --dark-color: #002240;
 }
 * {
   box-sizing: border-box;
@@ -153,11 +155,46 @@ img {
   background-color: #07539e;
   color: aliceblue;
 }
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondprimary-color);
+  color: var(--dark-color);
+}
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: var(--secondary-color);
+}
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
 .btn-outline {
   background-color: transparent;
   border: 1px solid #ffff;
   justify-content: center;
   align-items: center;
+}
+.lead {
+  font-size: 20px;
+}
+.sm {
+  font-size: 1rem;
+}
+.md {
+  font-size: 2rem;
+}
+.lg {
+  font-size: 3rem;
+}
+.xl {
+  font-size: 4rem;
 }
 .text-center {
   text-align: center;
@@ -254,4 +291,24 @@ img {
 .cli .grid > *:first-child {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+}
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+/* Languages */
+.languages .flex {
+  flex-wrap: wrap;
+}
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.5s ease-in;
+}
+.languages .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.languages .card:hover {
+  transform: translateY(1rem);
 }
