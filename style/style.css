@@ -240,3 +240,18 @@ img {
 .p-5 {
   padding: 3rem;
 }
+/* CLI */
+.cli .grid {
+  font-family: "Courier New", Courier, monospace;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.cli img {
+  margin: 0 0 0 5rem;
+  max-width: 35rem;
+  max-height: 25rem;
+}
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
