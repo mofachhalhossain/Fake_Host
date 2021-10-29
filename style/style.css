@@ -145,7 +145,7 @@ img {
 .btn {
   display: inline-block;
   padding: 5px 5px;
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 0;
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -155,6 +155,7 @@ img {
   background-color: #07539e;
   color: aliceblue;
 }
+/* Background */
 .bg-primary,
 .btn-primary {
   background-color: var(--primary-color);
@@ -168,6 +169,14 @@ img {
 .bg-dark,
 .btn-dark {
   background-color: var(--dark-color);
+  color: var(--secondary-color);
+}
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
   color: var(--secondary-color);
 }
 .bg-light,
@@ -311,4 +320,47 @@ img {
 }
 .languages .card:hover {
   transform: translateY(1rem);
+}
+/* Footer */
+.footer .social a {
+  margin: 0 10px;
+}
+/* Under 768px */
+@media screen and (max-width: 768px) {
+  .grid,
+  .showCase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .showCase {
+    height: auto;
+  }
+  .showCase-text {
+    text-align: center;
+    margin: 40px 0 0 0;
+  }
+  .showCase-form {
+    justify-self: center;
+    margin: auto;
+  }
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+/* Under 480px */
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: 110px;
+  }
+  .navbar .flex {
+    flex-direction: column;
+  }
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
