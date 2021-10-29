@@ -97,6 +97,34 @@ img {
 .showCase-form input:focus {
   outline: none;
 }
+.showCase::before,
+.showCase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  left: 0;
+  right: 0;
+  background: var(--secondary-color);
+  transform: skewY(-2.4deg);
+  -webkit-transform: skewY(-2.4deg);
+  -moz-transform: skewY(-2.4deg);
+}
+/* stats */
+.stats {
+  padding: 100px;
+}
+.stats-heading {
+  max-width: auto;
+  margin: auto;
+}
+.stats .grid h3 {
+  font-size: 25px;
+}
+.stats .grid p {
+  font-size: 14px;
+  font-weight: bold;
+}
 /* navbar Utility */
 .container {
   max-width: 1100px;
@@ -131,10 +159,11 @@ img {
   justify-content: center;
   align-items: center;
 }
-
+.text-center {
+  text-align: center;
+}
 .flex {
   display: flex;
-
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -142,8 +171,72 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 1.5rem 0;
+}
+.my-3 {
+  margin: 2rem 0;
+}
+.my-4 {
+  margin: 2.5rem 0;
+}
+.my-5 {
+  margin: 3rem 0;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 1.5rem;
+}
+.m-3 {
+  margin: 2rem;
+}
+.m-4 {
+  margin: 2.5rem;
+}
+.m-5 {
+  margin: 3rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 1.5rem 0;
+}
+.py-3 {
+  padding: 2rem 0;
+}
+.py-4 {
+  padding: 2.5rem 0;
+}
+.py-5 {
+  padding: 3rem 0;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 1.5rem;
+}
+.p-3 {
+  padding: 2rem;
+}
+.p-4 {
+  padding: 2.5rem;
+}
+.p-5 {
+  padding: 3rem;
 }
